@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="1" author="mashafadik@yahoo.com">
+        <sql>
+            create table if not exists person (
+            person_id int not null,
+            age int,
+            name varchar(255),
+            surname varchar(255)
+            );
+        </sql>
+    </changeSet>
+
+<!--    <changeSet id="2" author="mashafadik@yahoo.com" >-->
+<!--        <sql>-->
+<!--            create trigger tr_save_person-->
+<!--            before insert on person-->
+<!--            for each row-->
+<!--            set NEW.name = UPPER(NEW.name);-->
+<!--        </sql>-->
+<!--    </changeSet>-->
+
+<!--    <changeSet id="3" author="mashafadik@yahoo.com" >-->
+<!--        <sql>-->
+<!--            create trigger tr_update_person-->
+<!--            before update on person-->
+<!--            for each row-->
+<!--            set NEW.name = LOWER(NEW.name);-->
+
+<!--        </sql>-->
+<!--    </changeSet>-->
+</databaseChangeLog>
