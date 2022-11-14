@@ -87,7 +87,7 @@
                     <execution>
                         <id>Update DB</id>
                         <configuration>
-                            <propertyFile>src/main/resources/person_info.jdbc.properties</propertyFile>
+                            <propertyFile>src/main/resources/jpadb.jdbc.properties</propertyFile>
                             <changeLogFile>src/main/resources/changelog-master.xml</changeLogFile>
                         </configuration>
                         <goals>
