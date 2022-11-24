@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataset>
+    <productJ_info product_id="100" product_name="Chocolate" product_price="7.90"/>
+    <shop_info product_id="100" shop_name="Korona" shop_size="3900.70"/>
+</dataset>

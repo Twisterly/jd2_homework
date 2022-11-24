@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataset>
+    <company_info company_id="99" object="Company" company_name="Komatsu" staff_number = "2500"/>
+</dataset>

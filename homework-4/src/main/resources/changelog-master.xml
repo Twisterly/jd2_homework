@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="1" author="mashafadik@yahoo.com">
+        <sql>
+            CREATE TABLE IF NOT EXISTS `product_info` (
+            `id` BIGINT(19) PRIMARY KEY NOT NULL,
+            `name` VARCHAR(255),
+            `price` DOUBLE
+            );
+
+        </sql>
+    </changeSet>
+
+    <changeSet id="2" author="mashafadik@yahoo.com">
+        <sql>
+            CREATE TABLE IF NOT EXISTS `t_product_seq` (
+            `next_val` INT UNSIGNED PRIMARY KEY NOT NULL
+            );
+            INSERT INTO t_product_seq VALUES (0);
+        </sql>
+    </changeSet>
+
+    <changeSet id="3" author="mashafadik@yahoo.com">
+        <sql>
+            CREATE TABLE IF NOT EXISTS `person_info` (
+            `id` BIGINT(19) PRIMARY KEY NOT NULL,
+            `name` VARCHAR(255),
+            `surname` VARCHAR(255),
+            `age` INT
+            );
+
+        </sql>
+    </changeSet>
+
+    <changeSet id="4" author="mashafadik@yahoo.com">
+        <sql>
+            CREATE TABLE IF NOT EXISTS `project_info` (
+            `id` BIGINT(19) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+            `name` VARCHAR(255)
+            );
+
+        </sql>
+    </changeSet>
+
+    <changeSet id="5" author="mashafadik@yahoo.com">
+        <sql>
+            CREATE TABLE IF NOT EXISTS `car_info` (
+            `id` BINARY(16) PRIMARY KEY NOT NULL,
+            `model` VARCHAR(255),
+            `year` YEAR
+            );
+
+        </sql>
+    </changeSet>
+
+    <changeSet id="6" author="mashafadik@yahoo.com">
+        <sql>
+            CREATE TABLE IF NOT EXISTS `delivery_info` (
+            `id` BIGINT(19) PRIMARY KEY NOT NULL,
+            `date` DATE,
+            `city` VARCHAR(255),
+            `street` VARCHAR(255),
+            `house_number` BIGINT(19),
+            `postcode` BIGINT(19),
+            `lorry_model` VARCHAR(255),
+            `lorry_number` VARCHAR(255)
+            );
+
+        </sql>
+    </changeSet>
+
+    <changeSet id="7" author="mashafadik@yahoo.com">
+        <sql>
+            CREATE TABLE IF NOT EXISTS `productJ_info` (
+            `product_id` BIGINT(19) NOT NULL,
+            `product_name` VARCHAR(255),
+            `product_price` DOUBLE,
+            PRIMARY KEY (`product_id`)
+            );
+
+        </sql>
+    </changeSet>
+
+    <changeSet id="8" author="mashafadik@yahoo.com">
+        <sql>
+            CREATE TABLE IF NOT EXISTS `buyer_info` (
+            `product_id` BIGINT(19),
+            `buyer_name` VARCHAR(255),
+            `buyer_surname` VARCHAR(255),
+            `buyer_age` INT,
+            PRIMARY KEY (`product_id`),
+            FOREIGN KEY (`product_id`) REFERENCES `productJ_info` (`product_id`));
+
+        </sql>
+    </changeSet>
+
+    <changeSet id="9" author="mashafadik@yahoo.com">
+        <sql>
+            CREATE TABLE IF NOT EXISTS `shop_info` (
+            `product_id` BIGINT(19),
+            `shop_name` VARCHAR(255),
+            `shop_size` DOUBLE,
+            PRIMARY KEY (`product_id`),
+            FOREIGN KEY (`product_id`) REFERENCES `productJ_info` (`product_id`));
+
+        </sql>
+    </changeSet>
+
+    <changeSet id="10" author="mashafadik@yahoo.com">
+        <sql>
+            CREATE TABLE IF NOT EXISTS `child_info` (
+            `id` BIGINT(19),
+            `child_name` VARCHAR(255),
+            `child_surname` VARCHAR(255),
+            `child_group_number` INT,
+            `kindergarten_head` VARCHAR(255),
+            `kindergarten_number` INT,
+            `kindergarten_swim_pool` BOOLEAN,
+            PRIMARY KEY (`id`));
+
+        </sql>
+    </changeSet>
+
+    <changeSet id="11" author="mashafadik@yahoo.com">
+        <sql>
+            CREATE TABLE IF NOT EXISTS `educator_info` (
+            `id` BIGINT(19),
+            `educator_name` VARCHAR(255),
+            `educator_surname` VARCHAR(255),
+            `educator_experience` INT,
+            `kindergarten_head` VARCHAR(255),
+            `kindergarten_number` INT,
+            `kindergarten_swim_pool` BOOLEAN,
+            PRIMARY KEY (`id`));
+
+        </sql>
+    </changeSet>
+
+    <changeSet id="12" author="mashafadik@yahoo.com">
+        <sql>
+            CREATE TABLE IF NOT EXISTS `company_info` (
+            `company_id` BIGINT(19) NOT NULL,
+            `object` VARCHAR(255),
+            `company_name` VARCHAR(255),
+            `staff_number` INT,
+            `equipment_model` VARCHAR(255),
+            `operator_name` VARCHAR(255),
+            `operator_surname`VARCHAR(255),
+            `operator_salary` INT,
+            PRIMARY KEY (`company_id`));
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataset>
+    <company_info company_id="500" object="Equipment" company_name="Builder" staff_number="100"
+                  equipment_model="Doosan brew-908"/>
+</dataset>

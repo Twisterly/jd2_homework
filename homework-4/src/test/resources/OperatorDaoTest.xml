@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataset>
+    <company_info company_id="808" object="Operator" operator_name="Irvin" operator_surname="George"
+                  operator_salary="3219.90"
+                  company_name="Flying Tiger" staff_number="12000"/>
+</dataset>

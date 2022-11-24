@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataset>
+    <productJ_info product_id="405" product_name="Avocado" product_price="15.00"/>
+    <buyer_info product_id="405" buyer_name="John" buyer_surname="Williams" buyer_age="46"/>
+</dataset>

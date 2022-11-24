@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataset>
+    <delivery_info id="100" date="2022-11-29" city="Minsk" street="Surganova"
+                   house_number="15" postcode="220010" lorry_model="RENAULT"
+                   lorry_number="A-6429-GFE" driver_name="Ilya" driver_surname="Kotikov"/>
+</dataset>
