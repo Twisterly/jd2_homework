@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <!-- Base Define -->
+    <definition name="base.definition"
+                template="/WEB-INF/layouts/classic.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/basefragments/_header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/basefragments/_menu.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/basefragments/_footer.jsp" />
+    </definition>
+
+    <!-- Home Page -->
+    <definition name="homePage" extends="base.definition">
+        <put-attribute name="title" value="Home Page" />
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_home.jsp" />
+    </definition>
+
+    <!-- Principles Page -->
+    <definition name="principlesPage" extends="base.definition">
+        <put-attribute name="title" value="Principles" />
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/principles.jsp" />
+    </definition>
+
+    <!-- AboutJava Page -->
+    <definition name="aboutJavaPage" extends="base.definition">
+        <put-attribute name="title" value="About Java" />
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/aboutJava.jsp" />
+    </definition>
+
+    <!-- Versions Page -->
+    <definition name="versionsPage" extends="base.definition">
+        <put-attribute name="title" value="Java versions" />
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/versions.jsp" />
+    </definition>
+
+    <!-- Editions Page -->
+    <definition name="editionsPage" extends="base.definition">
+        <put-attribute name="title" value="Java editions" />
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/editions.jsp" />
+    </definition>
+
+    <!-- History Page -->
+    <definition name="historyPage" extends="base.definition">
+        <put-attribute name="title" value="History" />
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/history.jsp" />
+    </definition>
+
+
+
+</tiles-definitions>
